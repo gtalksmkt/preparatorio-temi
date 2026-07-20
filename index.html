@@ -188,16 +188,12 @@
   #professores { position:relative; overflow:hidden; }
   #professores::before { content:''; position:absolute; right:0; top:50%; transform:translateY(-50%); width:500px; height:600px; background:radial-gradient(ellipse,rgba(46,233,111,.07) 0%,transparent 70%); pointer-events:none; }
   .profs-hd { text-align:center; margin-bottom:56px; position:relative; z-index:1; }
-  .profs-photo { position:relative; max-width:680px; margin:0 auto 48px; }
-  .profs-photo-frame {
-    position:relative; overflow:hidden;
-    background:linear-gradient(180deg,transparent 0%,rgba(46,233,111,.06) 60%,rgba(46,233,111,.12) 100%);
-    border-radius:var(--r); border:1px solid rgba(46,233,111,.15);
-  }
-  .profs-photo-frame img { width:158%; max-width:none; display:block; filter:drop-shadow(0 20px 40px rgba(0,0,0,.5)); }
   .profs-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:960px; margin:0 auto; position:relative; z-index:1; }
-  .prof-card { padding:34px 30px; background:var(--gbg); border:1px solid var(--gbd); backdrop-filter:var(--gbl); -webkit-backdrop-filter:var(--gbl); box-shadow:var(--gsw); border-radius:var(--r); transition:transform .25s,border-color .25s; }
+  .prof-card { padding:34px 30px; background:var(--gbg); border:1px solid var(--gbd); backdrop-filter:var(--gbl); -webkit-backdrop-filter:var(--gbl); box-shadow:var(--gsw); border-radius:var(--r); transition:transform .25s,border-color .25s; overflow:hidden; }
   .prof-card:hover { transform:translateY(-4px); border-color:rgba(46,233,111,.35); }
+  .prof-photo { margin:-34px -30px 26px; position:relative; }
+  .prof-photo img { width:100%; height:340px; object-fit:cover; object-position:center 12%; display:block; }
+  .prof-photo::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 55%,rgba(3,5,4,.55) 100%); pointer-events:none; }
   .prof-card-tag { font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--acc); margin-bottom:8px; }
   .prof-card-name { font-size:23px; font-weight:900; color:var(--white); letter-spacing:-.4px; margin-bottom:4px; }
   .prof-card-spec { font-size:13px; color:var(--acc); font-weight:600; margin-bottom:20px; }
@@ -587,15 +583,12 @@
       </p>
     </div>
 
-    <div class="profs-photo" data-r data-d="1">
-      <div class="profs-photo-frame">
-        <img src="medicos.webp" alt="Professores do Preparatório TEMI">
-      </div>
-    </div>
-
     <div class="profs-grid">
       <!-- TODO: substituir nomes e currículos reais dos professores -->
-      <div class="prof-card" data-r data-d="2">
+      <div class="prof-card" data-r data-d="1">
+        <div class="prof-photo">
+          <img src="medico-01.png" alt="Professor do Preparatório TEMI">
+        </div>
         <div class="prof-card-tag">Professor</div>
         <div class="prof-card-name">Dr. Nome do Professor</div>
         <div class="prof-card-spec">Médico Intensivista</div>
@@ -615,7 +608,10 @@
         </div>
       </div>
 
-      <div class="prof-card" data-r data-d="3">
+      <div class="prof-card" data-r data-d="2">
+        <div class="prof-photo">
+          <img src="medica-02.png" alt="Professora do Preparatório TEMI">
+        </div>
         <div class="prof-card-tag">Professora</div>
         <div class="prof-card-name">Dra. Nome da Professora</div>
         <div class="prof-card-spec">Médica Intensivista</div>
