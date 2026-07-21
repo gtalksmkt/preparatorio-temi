@@ -204,6 +204,22 @@
   .cred-tag p { font-size:13.5px; color:var(--gl); }
   .cred-tag p strong { color:var(--white); font-weight:600; }
 
+  /* ═══ TEMAS ══════════════════════════════════════════════════ */
+  #temas { position:relative; overflow:hidden; }
+  #temas::before { content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:700px; height:400px; background:radial-gradient(ellipse,rgba(46,233,111,.05) 0%,transparent 70%); pointer-events:none; }
+  .temas-hd { text-align:center; margin-bottom:52px; position:relative; z-index:1; }
+  .temas-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; max-width:960px; margin:0 auto; position:relative; z-index:1; }
+  .tema { display:flex; align-items:center; gap:13px; padding:16px 20px; border-radius:14px; background:var(--gbg); border:1px solid var(--gbd); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); transition:border-color .2s,transform .2s; }
+  .tema:hover { border-color:rgba(46,233,111,.32); transform:translateY(-3px); }
+  .tema-ic { width:22px; height:22px; flex-shrink:0; border-radius:6px; background:var(--ad); border:1px solid rgba(46,233,111,.25); display:flex; align-items:center; justify-content:center; }
+  .tema-ic svg { width:12px; height:12px; stroke:var(--acc); fill:none; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+  .tema span { font-size:14px; font-weight:600; color:var(--white); line-height:1.3; }
+  .temas-more { text-align:center; margin-top:40px; position:relative; z-index:1; }
+  .temas-more-badge { display:inline-flex; align-items:center; gap:10px; padding:16px 32px; border-radius:999px; background:linear-gradient(160deg,rgba(46,233,111,.15),rgba(46,233,111,.05)); border:1.5px solid rgba(46,233,111,.5); box-shadow:0 0 40px rgba(46,233,111,.12); }
+  .temas-more-badge svg { width:22px; height:22px; stroke:var(--acc); fill:none; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; }
+  .temas-more-badge span { font-size:clamp(16px,2.4vw,20px); font-weight:800; color:var(--white); letter-spacing:-.3px; }
+  .temas-more-badge span em { color:var(--acc); font-style:normal; }
+
   /* ═══ FAQ ════════════════════════════════════════════════════ */
   #faq .faq-hd { text-align:center; margin-bottom:64px; }
   .faq-list { max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:10px; }
@@ -280,6 +296,7 @@
     .flt-1,.flt-2 { display:none; }
     .feat-grid { grid-template-columns:1fr 1fr; }
     .est-grid { grid-template-columns:repeat(3,1fr); }
+    .temas-grid { grid-template-columns:1fr 1fr; }
     .profs-grid { grid-template-columns:1fr; }
     .temiflix { flex-direction:column; text-align:center; align-items:center; }
   }
@@ -287,6 +304,7 @@
     .sec { padding:72px 20px; }
     .feat-grid { grid-template-columns:1fr; }
     .est-grid { grid-template-columns:1fr 1fr; }
+    .temas-grid { grid-template-columns:1fr; }
     .hero-stats { flex-wrap:wrap; gap:14px 0; }
     .hst { padding:0 16px; }
     .nav-wpp { display:none; }
@@ -487,6 +505,42 @@
         <h3>TEMIFLIX</h3>
         <p>Vídeos semanais enviados aos nossos alunos com temas essenciais da Medicina Intensiva,
         focados na prática da UTI e no perfil da prova.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ TEMAS ═══════════════════════════ -->
+<section id="temas" class="sec">
+  <div class="wrap">
+    <div class="temas-hd" data-r>
+      <div class="eyebrow ec">Conteúdo</div>
+      <h2 style="font-size:clamp(26px,4vw,44px);margin-bottom:14px;">Alguns dos <span class="grn">temas abordados</span></h2>
+      <p style="font-size:16px;color:var(--gl);max-width:560px;margin:0 auto;">
+        Do manejo do paciente grave aos temas que mais derrubam candidato na prova — a mentoria cobre o que a banca cobra.
+      </p>
+    </div>
+
+    <div class="temas-grid">
+      <div class="tema" data-r data-d="1"><span class="tema-ic"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></span><span>Pancreatite aguda</span></div>
+      <div class="tema" data-r data-d="1"><span class="tema-ic"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></span><span>Resistência aos betalactâmicos</span></div>
+      <div class="tema" data-r data-d="2"><span class="tema-ic"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></span><span>Trauma na gestante</span></div>
+      <div class="tema" data-r data-d="2"><span class="tema-ic"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></span><span>Tratamento da infecção fúngica</span></div>
+      <div class="tema" data-r data-d="3"><span class="tema-ic"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></span><span>Gasometria arterial</span></div>
+      <div class="tema" data-r data-d="3"><span class="tema-ic"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></span><span>Trombose venosa cerebral</span></div>
+      <div class="tema" data-r data-d="1"><span class="tema-ic"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></span><span>Estado de mal asmático</span></div>
+      <div class="tema" data-r data-d="2"><span class="tema-ic"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></span><span>Toxíndromes</span></div>
+      <div class="tema" data-r data-d="3"><span class="tema-ic"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></span><span>Anemia em UTI</span></div>
+      <div class="tema" data-r data-d="1"><span class="tema-ic"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></span><span>Insuficiência cardíaca aguda</span></div>
+      <div class="tema" data-r data-d="2"><span class="tema-ic"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></span><span>Encefalopatia hipertensiva</span></div>
+    </div>
+
+    <div class="temas-more" data-r data-d="2">
+      <div class="temas-more-badge">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        <span>E muito <em>mais</em> que a banca cobra!</span>
       </div>
     </div>
   </div>
