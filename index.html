@@ -321,6 +321,106 @@
     .sticky-wa { width:38px; height:38px; }
     .sticky-wa svg { width:18px; height:18px; }
   }
+
+  /* ═══ REVISÕES TEMI ══════════════════════════════════════════ */
+  #revisoes { position:relative; overflow:hidden; background:linear-gradient(180deg,rgba(19,24,22,.6) 0%,transparent 65%); }
+  #revisoes::before { content:''; position:absolute; top:-60px; left:50%; transform:translateX(-50%); width:820px; height:460px; background:radial-gradient(ellipse,rgba(46,233,111,.08) 0%,transparent 68%); pointer-events:none; }
+  .rev-hd { text-align:center; margin-bottom:44px; position:relative; z-index:1; }
+  .rev-local { display:inline-flex; align-items:center; gap:8px; margin-top:16px; padding:7px 18px; border-radius:999px; border:1px solid rgba(46,233,111,.28); background:rgba(46,233,111,.08); font-size:13px; font-weight:600; color:var(--acc); }
+  .rev-local svg { width:14px; height:14px; stroke:var(--acc); fill:none; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+
+  /* combo */
+  .rev-combo {
+    position:relative; z-index:1; max-width:1000px; margin:0 auto 22px;
+    padding:40px 44px;
+    display:grid; grid-template-columns:1.25fr 1fr; gap:40px; align-items:center;
+    border-radius:var(--r);
+    border:1.5px solid rgba(46,233,111,.55);
+    background:linear-gradient(160deg,rgba(46,233,111,.13) 0%,rgba(46,233,111,.035) 100%);
+    backdrop-filter:var(--gbl); -webkit-backdrop-filter:var(--gbl);
+    box-shadow:0 0 0 1px rgba(46,233,111,.1),0 32px 72px rgba(0,0,0,.5),0 0 100px rgba(46,233,111,.14);
+    overflow:hidden;
+  }
+  .rev-combo::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,transparent,var(--acc),transparent); }
+  .rev-combo-tag { display:inline-flex; align-items:center; gap:8px; font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--acc); margin-bottom:10px; }
+  .rev-combo-tag::before { content:''; width:7px; height:7px; border-radius:50%; background:var(--acc); box-shadow:0 0 10px var(--ag); }
+  .rev-combo h3 { font-size:clamp(24px,3.2vw,32px); color:var(--white); margin-bottom:10px; }
+  .rev-combo h3 em { color:var(--acc); font-style:normal; }
+  .rev-combo > div > p { font-size:15px; color:var(--gl); line-height:1.65; }
+  .rev-combo-pair { display:flex; flex-direction:column; gap:10px; margin-top:22px; }
+  .rev-pair-item { display:flex; align-items:center; gap:12px; padding:13px 16px; border-radius:13px; background:rgba(255,255,255,.05); border:1px solid var(--gbd); }
+  .rev-pair-item svg { width:17px; height:17px; flex-shrink:0; stroke:var(--acc); fill:none; stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; }
+  .rev-pair-item p { font-size:14px; color:var(--gl); line-height:1.4; }
+  .rev-pair-item p strong { color:var(--white); font-weight:700; }
+  .rev-combo-side { display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px; padding:28px 24px; border-radius:18px; background:rgba(3,5,4,.42); border:1px solid rgba(46,233,111,.22); }
+  .rev-combo-side-l { font-size:12px; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; color:var(--gm); }
+  .rev-combo-side-n { font-size:34px; font-weight:900; color:var(--acc); letter-spacing:-1px; line-height:1; }
+  .rev-combo-side-s { font-size:13px; color:var(--gl); line-height:1.5; }
+  .rev-combo-side .btn { width:100%; }
+
+  /* cards separados */
+  .rev-grid { position:relative; z-index:1; max-width:1000px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .rev-card { display:flex; flex-direction:column; padding:34px 32px; border-radius:var(--r); background:var(--gbg); border:1px solid var(--gbd); backdrop-filter:var(--gbl); -webkit-backdrop-filter:var(--gbl); box-shadow:var(--gsw); transition:transform .25s,border-color .25s; }
+  .rev-card:hover { transform:translateY(-5px); border-color:rgba(46,233,111,.32); }
+  .rev-card-top { display:flex; align-items:center; gap:14px; margin-bottom:18px; }
+  .rev-card-ic { width:50px; height:50px; flex-shrink:0; border-radius:14px; background:var(--ad); border:1px solid rgba(46,233,111,.2); display:flex; align-items:center; justify-content:center; }
+  .rev-card-ic svg { width:24px; height:24px; stroke:var(--acc); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+  .rev-card-fase { font-size:11px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:var(--acc); }
+  .rev-card h3 { font-size:21px; color:var(--white); margin-top:2px; }
+  .rev-card-when { display:inline-flex; align-items:center; gap:8px; align-self:flex-start; padding:7px 14px; border-radius:999px; background:rgba(255,255,255,.05); border:1px solid var(--gbd); font-size:12.5px; font-weight:700; color:var(--white); margin-bottom:18px; }
+  .rev-card-when svg { width:13px; height:13px; stroke:var(--acc); fill:none; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
+  .rev-list { list-style:none; display:flex; flex-direction:column; gap:11px; margin-bottom:24px; }
+  .rev-list li { position:relative; padding-left:26px; font-size:14px; color:var(--gl); line-height:1.55; }
+  .rev-list li > svg { position:absolute; left:0; top:4px; width:16px; height:16px; stroke:var(--acc); fill:none; stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; }
+  .rev-list li strong { color:var(--white); font-weight:600; }
+  .rev-card .btn { margin-top:auto; width:100%; }
+  .rev-cta { font-size:15px; padding:16px 26px; white-space:normal; text-align:center; line-height:1.25; }
+  .rev-grid, .rev-card, .rev-combo, .rev-combo > div, .rev-combo-side, .rev-step { min-width:0; }
+  .rev-eve { margin-top:14px; font-size:12px; color:var(--gm); text-align:center; }
+  .rev-eve strong { color:var(--gl); font-weight:600; }
+
+  /* linha do tempo */
+  .rev-tl { position:relative; z-index:1; max-width:1000px; margin:56px auto 0; padding:34px 32px; border-radius:var(--r); background:rgba(19,24,22,.5); border:1px solid var(--gbd); }
+  .rev-tl-hd { text-align:center; font-size:12px; font-weight:800; letter-spacing:1.8px; text-transform:uppercase; color:var(--gm); margin-bottom:30px; }
+  .rev-tl-track { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; position:relative; }
+  .rev-tl-track::before { content:''; position:absolute; top:19px; left:9%; right:9%; height:2px; background:linear-gradient(90deg,var(--ag),rgba(46,233,111,.12)); }
+  .rev-step { text-align:center; position:relative; }
+  .rev-dot { width:38px; height:38px; border-radius:50%; margin:0 auto 14px; background:var(--black); border:2px solid var(--acc); display:flex; align-items:center; justify-content:center; position:relative; z-index:1; box-shadow:0 0 20px rgba(46,233,111,.22); }
+  .rev-dot svg { width:17px; height:17px; stroke:var(--acc); fill:none; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+  .rev-step.exam .rev-dot { border-color:rgba(255,255,255,.28); box-shadow:none; }
+  .rev-step.exam .rev-dot svg { stroke:var(--gl); }
+  .rev-date { font-size:15px; font-weight:900; color:var(--white); letter-spacing:-.3px; }
+  .rev-what { font-size:12.5px; font-weight:700; color:var(--acc); margin-top:3px; line-height:1.35; }
+  .rev-step.exam .rev-what { color:var(--gm); }
+  .rev-meta { font-size:11.5px; color:var(--gm); margin-top:5px; line-height:1.45; }
+
+  @media (max-width:960px) {
+    .rev-combo { grid-template-columns:1fr; gap:28px; padding:34px 28px; }
+    .rev-grid  { grid-template-columns:1fr; }
+  }
+  @media (max-width:860px) {
+    .rev-tl { padding:28px 22px; }
+    .rev-tl-track { grid-template-columns:1fr; gap:0; }
+    .rev-tl-track::before { top:6px; bottom:6px; left:18px; right:auto; width:2px; height:auto; background:linear-gradient(180deg,var(--ag),rgba(46,233,111,.12)); }
+    .rev-step { display:grid; grid-template-columns:38px 1fr; column-gap:16px; row-gap:0; align-items:start; text-align:left; padding:10px 0; }
+    .rev-dot { margin:0; grid-column:1; grid-row:1 / span 3; }
+    .rev-date, .rev-what, .rev-meta { grid-column:2; }
+    .rev-date { padding-top:8px; }
+    .rev-what { margin-top:2px; }
+    .rev-meta { margin-top:3px; }
+  }
+  @media (max-width:600px) {
+    .rev-combo { padding:30px 22px; }
+    .rev-card  { padding:28px 22px; }
+    .rev-combo-side { padding:24px 18px; }
+    .rev-combo h3 { font-size:22px; }
+    .rev-combo-side-n { font-size:26px; }
+    .rev-card-when { border-radius:13px; align-items:flex-start; padding:10px 14px; font-size:11.5px; line-height:1.45; }
+    .rev-card-when svg { margin-top:2px; }
+    .rev-cta { padding:15px 16px; font-size:14.5px; }
+    .rev-list li { padding-left:24px; font-size:13.5px; }
+    .rev-tl { padding:26px 20px; }
+  }
   </style>
 </head>
 <body>
@@ -407,6 +507,143 @@
   <p class="tlt">PREPARE-SE PARA A 1ª E A 2ª FASE COM <em>MÉTODO, CONSTÂNCIA E DIRECIONAMENTO.</em></p>
 </div>
 
+
+<!-- ══════════════════════ REVISÕES TEMI ═══════════════════ -->
+<section id="revisoes" class="sec">
+  <div class="wrap">
+    <div class="rev-hd" data-r>
+      <div class="eyebrow ec">Reta final · Novembro 2026</div>
+      <h2 style="font-size:clamp(26px,4vw,44px);margin-bottom:14px;">Revisões TEMI: <span class="grn">teórica e prática</span></h2>
+      <p style="font-size:16px;color:var(--gl);max-width:620px;margin:0 auto;">
+        A semana da prova, resolvida. Revisão dirigida para a <strong style="color:var(--white);font-weight:600;">1ª fase</strong>
+        e uma imersão completa de checklists e cenários para a <strong style="color:var(--white);font-weight:600;">2ª fase</strong>.
+      </p>
+      <div class="rev-local">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Encontros presenciais em Recife-PE
+      </div>
+    </div>
+
+    <!-- COMBO -->
+    <div class="rev-combo" data-r data-d="1">
+      <div>
+        <div class="rev-combo-tag">Combo Revisões TEMI</div>
+        <h3>As duas revisões, <em>do dia 09 ao 14 de novembro</em></h3>
+        <p>
+          Você entra na semana da prova com a teórica revisada e sai dela treinado para os cenários da
+          prática. Um único pacote, do primeiro encontro presencial até a véspera da prova prática.
+        </p>
+        <div class="rev-combo-pair">
+          <div class="rev-pair-item">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            <p><strong>Revisão Teórica · 1ª fase</strong> — 09/11, encontro presencial em formato híbrido</p>
+          </div>
+          <div class="rev-pair-item">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            <p><strong>Revisão Prática · 2ª fase</strong> — 11 a 13/11 on-line + 14/11 presencial</p>
+          </div>
+        </div>
+      </div>
+      <div class="rev-combo-side">
+        <div class="rev-combo-side-l">Combo completo</div>
+        <div class="rev-combo-side-n">1ª + 2ª fase</div>
+        <div class="rev-combo-side-s">As duas revisões na semana da prova, com condição especial de combo.</div>
+        <a href="https://wa.me/5585998302705?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Combo%20Revis%C3%B5es%20TEMI%202026%20(te%C3%B3rica%20%2B%20pr%C3%A1tica)." target="_blank" rel="noopener" class="btn btn-primary rev-cta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Quero o combo
+        </a>
+      </div>
+    </div>
+
+    <!-- SEPARADAS -->
+    <div class="rev-grid">
+      <div class="rev-card" data-r data-d="2">
+        <div class="rev-card-top">
+          <div class="rev-card-ic">
+            <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div>
+            <div class="rev-card-fase">1ª fase</div>
+            <h3>Revisão Teórica</h3>
+          </div>
+        </div>
+        <span class="rev-card-when">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          09/11 · véspera da prova teórica
+        </span>
+        <ul class="rev-list">
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><strong>Encontro presencial</strong> em Recife-PE, em <strong>formato híbrido</strong> — participe no local ou on-line.</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Revisão dirigida aos temas de maior peso na prova teórica, no perfil da banca.</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Fechamento de conteúdo no dia anterior à prova — você chega com tudo fresco.</li>
+        </ul>
+        <a href="https://wa.me/5585998302705?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Revis%C3%A3o%20Te%C3%B3rica%20TEMI%202026%20(1%C2%AA%20fase)." target="_blank" rel="noopener" class="btn btn-outline-g rev-cta">Quero a Revisão Teórica</a>
+        <p class="rev-eve">Prova teórica: <strong>10/11</strong></p>
+      </div>
+
+      <div class="rev-card" data-r data-d="3">
+        <div class="rev-card-top">
+          <div class="rev-card-ic">
+            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div>
+            <div class="rev-card-fase">2ª fase</div>
+            <h3>Revisão Prática</h3>
+          </div>
+        </div>
+        <span class="rev-card-when">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          11 a 14/11 · on-line + presencial
+        </span>
+        <ul class="rev-list">
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><strong>11 a 13/11 · encontros on-line</strong>, das <strong>20h às 21h30</strong> — 1h30 por dia.</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Revisão para a segunda parte + <strong>checklists e cenários</strong> no formato da prova.</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><strong>14/11 · revisão presencial</strong> em Recife-PE, na véspera da prova prática.</li>
+        </ul>
+        <a href="https://wa.me/5585998302705?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Revis%C3%A3o%20Pr%C3%A1tica%20TEMI%202026%20(2%C2%AA%20fase)." target="_blank" rel="noopener" class="btn btn-outline-g rev-cta">Quero a Revisão Prática</a>
+        <p class="rev-eve">Prova prática: <strong>15/11</strong></p>
+      </div>
+    </div>
+
+    <!-- LINHA DO TEMPO -->
+    <div class="rev-tl" data-r data-d="4">
+      <div class="rev-tl-hd">Como fica a sua semana de prova</div>
+      <div class="rev-tl-track">
+        <div class="rev-step">
+          <div class="rev-dot"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="rev-date">09/11</div>
+          <div class="rev-what">Revisão Teórica<br>presencial</div>
+          <div class="rev-meta">Recife-PE · formato híbrido</div>
+        </div>
+        <div class="rev-step exam">
+          <div class="rev-dot"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <div class="rev-date">10/11</div>
+          <div class="rev-what">Prova teórica</div>
+          <div class="rev-meta">1ª fase</div>
+        </div>
+        <div class="rev-step">
+          <div class="rev-dot"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <div class="rev-date">11 a 13/11</div>
+          <div class="rev-what">Encontros<br>on-line</div>
+          <div class="rev-meta">20h às 21h30 · 1h30/dia<br>checklists e cenários</div>
+        </div>
+        <div class="rev-step">
+          <div class="rev-dot"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="rev-date">14/11</div>
+          <div class="rev-what">Revisão Prática<br>presencial</div>
+          <div class="rev-meta">Recife-PE</div>
+        </div>
+        <div class="rev-step exam">
+          <div class="rev-dot"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <div class="rev-date">15/11</div>
+          <div class="rev-what">Prova prática</div>
+          <div class="rev-meta">2ª fase</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
 <!-- ══════════════════════ FEATURES ════════════════════════ -->
 <section id="features" class="sec">
   <div class="wrap">
