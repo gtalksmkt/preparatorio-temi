@@ -70,6 +70,10 @@
   .brand { display:flex; align-items:center; gap:10px; font-size:16px; font-weight:800; color:var(--white); }
   .nav-r { display:flex; align-items:center; gap:20px; }
   .nav-wpp { display:flex; align-items:center; gap:8px; font-size:13px; font-weight:500; color:var(--gl); }
+  .brand-logo { height:44px; width:auto; display:block; }
+  .nav-combo, .nav-insc { padding:11px 26px; font-size:14px; }
+  .nav-combo { border-width:1.5px; }
+  .nc-short { display:none; }
   .wpp-dot { width:8px; height:8px; border-radius:50%; background:#25D366; animation:pg 2.2s infinite; }
   @keyframes pg { 0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.5)} 60%{box-shadow:0 0 0 7px rgba(37,211,102,0)} }
 
@@ -300,6 +304,9 @@
     .profs-grid { grid-template-columns:1fr; }
     .temiflix { flex-direction:column; text-align:center; align-items:center; }
   }
+  @media (max-width:860px) {
+    .nav-wpp { display:none; }
+  }
   @media (max-width:600px) {
     .sec { padding:72px 20px; }
     .feat-grid { grid-template-columns:1fr; }
@@ -308,6 +315,13 @@
     .hero-stats { flex-wrap:wrap; gap:14px 0; }
     .hst { padding:0 16px; }
     .nav-wpp { display:none; }
+    #nav { padding:12px 14px; }
+    .nav-row { gap:10px; }
+    .nav-r { gap:8px; }
+    .brand-logo { height:34px; }
+    .nav-combo, .nav-insc { padding:12px 14px; font-size:12.5px; }
+    .nc-long { display:none; }
+    .nc-short { display:inline; }
     .hero-vis { display:none; }
     #hero { min-height:auto; padding-bottom:64px; }
     .temiflix { padding:30px 24px; }
@@ -323,7 +337,7 @@
   }
 
   /* ═══ REVISÕES TEMI ══════════════════════════════════════════ */
-  #revisoes { position:relative; overflow:hidden; background:linear-gradient(180deg,rgba(19,24,22,.6) 0%,transparent 65%); }
+  #revisoes { position:relative; overflow:hidden; scroll-margin-top:84px; background:linear-gradient(180deg,rgba(19,24,22,.6) 0%,transparent 65%); }
   #revisoes::before { content:''; position:absolute; top:-60px; left:50%; transform:translateX(-50%); width:820px; height:460px; background:radial-gradient(ellipse,rgba(46,233,111,.08) 0%,transparent 68%); pointer-events:none; }
   .rev-hd { text-align:center; margin-bottom:44px; position:relative; z-index:1; }
   .rev-local { display:inline-flex; align-items:center; gap:8px; margin-top:16px; padding:7px 18px; border-radius:999px; border:1px solid rgba(46,233,111,.28); background:rgba(46,233,111,.08); font-size:13px; font-weight:600; color:var(--acc); }
@@ -434,14 +448,18 @@
 <nav id="nav">
   <div class="nav-row">
     <a href="#" class="brand">
-      <img src="logo-temi.webp" alt="Preparatório TEMI" style="height:44px;width:auto;">
+      <img src="logo-temi.webp" alt="Preparatório TEMI" class="brand-logo">
     </a>
     <div class="nav-r">
       <a href="https://wa.me/5585998302705" class="nav-wpp" target="_blank" rel="noopener">
         <span class="wpp-dot"></span>
         Precisa de ajuda? Fale conosco
       </a>
-      <a href="#pricing" class="btn btn-primary" style="padding:11px 26px;font-size:14px;">Inscrever-se</a>
+      <a href="#revisoes" class="btn btn-outline-g nav-combo">
+        <span class="nc-long">Combo Revisões TEMI</span>
+        <span class="nc-short">Revisões</span>
+      </a>
+      <a href="#pricing" class="btn btn-primary nav-insc">Inscrever-se</a>
     </div>
   </div>
 </nav>
